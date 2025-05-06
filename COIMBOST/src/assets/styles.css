@@ -1,0 +1,227 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+.container {
+  background-color: #161b22;
+  border: 2px solid #9e0ad9;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+.service-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #9e0ad9;
+}
+
+.league-icons-display {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.league-icon img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #1e1e1e;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.league-icon-arrow {
+  font-size: 2rem;
+  color: #9e0ad9;
+}
+
+label {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  display: block;
+  color: #8b949e;
+}
+
+select {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+select:focus {
+  outline: none;
+  border-color: #9e0ad9;
+}
+
+.button-container {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.botao-cupom {
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #333;
+  background-color: #0d1117;
+  color: #c9d1d9;
+  flex: 1;
+}
+
+.botao-cupom:focus {
+  outline: none;
+  border-color: #9e0ad9;
+}
+.price-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #00c853; /* Verde para o preço */
+  margin-top: 20px;
+  text-align: center;
+}
+
+.order-display {
+  font-size: 1rem;
+  color: #f0b90b; /* Amarelo para o pedido */
+  margin-top: 10px;
+  text-align: center;
+}
+
+.new-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00c853; /* Destaque para o preço */
+}
+
+.order-details {
+  font-size: 1rem;
+  color: #f0b90b; /* Destaque para o pedido */
+}
+
+.error {
+  font-size: 1rem;
+  color: #ff4d4d; /* Vermelho para mensagens de erro */
+}
+
+#payButton {
+  margin-top: 20px; /* Adiciona distância entre o botão e o campo acima */
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #00c853;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#payButton:hover {
+  background-color: #00a73d;
+}
+
+#couponButton {
+  background-color: #9e0ad9;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#couponButton:hover {
+  background-color: #9e0ad9;
+}
+
+/* Tooltip styles */
+.tooltip {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Snowflake container */
+.snowflakes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+.snowflake {
+  position: absolute;
+  color: #fff;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  font-size: 1.5rem;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #161b22;
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #9e0ad9;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 1.2rem;
+}
+
+footer a:hover {
+  color: #9e0ad9;
+}

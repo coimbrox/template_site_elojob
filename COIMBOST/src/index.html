@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COIMBOST - Elojob</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="scripts/app.js" defer></script>
+</head>
+<body>
+    <!-- Snowflake Animation -->
+    <div class="snowflakes"></div>
+
+    <!-- Elo Boost Container -->
+    <div id="eloBoostContainer" class="container">
+        <h1 class="service-title"><i class="fas fa-gamepad"></i> COIMBOST - Elojob</h1>
+        <div class="league-icons-display">
+            <div class="league-icon current-league-icon">
+                <img src="" alt="Current League" id="currentLeagueIcon">
+                <p id="currentLeagueText">Liga Atual</p>
+            </div>
+            <div class="league-icon-arrow">
+                <i class="fas fa-arrow-right"></i>
+            </div>
+            <div class="league-icon desired-league-icon">
+                <img src="" alt="Desired League" id="desiredLeagueIcon">
+                <p id="desiredLeagueText">Liga Desejada</p>
+            </div>
+        </div>
+        <label for="currentElo">Selecione sua liga e divisão atual:</label>
+        <select id="currentElo">
+            <option value="">Selecione...</option>
+            <option value="0">Ferro IV</option>
+            <option value="1">Ferro III</option>
+            <option value="2">Ferro II</option>
+            <option value="3">Ferro I</option>
+            <option value="4">Bronze IV</option>
+            <option value="5">Bronze III</option>
+            <option value="6">Bronze II</option>
+            <option value="7">Bronze I</option>
+            <option value="8">Prata IV</option>
+            <option value="9">Prata III</option>
+            <option value="10">Prata II</option>
+            <option value="11">Prata I</option>
+            <option value="12">Ouro IV</option>
+            <option value="13">Ouro III</option>
+            <option value="14">Ouro II</option>
+            <option value="15">Ouro I</option>
+            <option value="16">Platina IV</option>
+            <option value="17">Platina III</option>
+            <option value="18">Platina II</option>
+            <option value="19">Platina I</option>
+            <option value="20">Esmeralda IV</option>
+            <option value="21">Esmeralda III</option>
+            <option value="22">Esmeralda II</option>
+            <option value="23">Esmeralda I</option>
+            <option value="24">Diamante IV</option>
+            <option value="25">Diamante III</option>
+            <option value="26">Diamante II</option>
+            <option value="27">Diamante I</option>
+            <option value="28">Mestre</option>
+            <option value="29">Grão Mestre</option>
+            <option value="30">Desafiante</option>
+        </select>
+        <label for="desiredElo">Selecione sua liga e divisão desejada:</label>
+        <select id="desiredElo">
+            <option value="">Selecione...</option>
+            <option value="0">Ferro IV</option>
+            <option value="1">Ferro III</option>
+            <option value="2">Ferro II</option>
+            <option value="3">Ferro I</option>
+            <option value="4">Bronze IV</option>
+            <option value="5">Bronze III</option>
+            <option value="6">Bronze II</option>
+            <option value="7">Bronze I</option>
+            <option value="8">Prata IV</option>
+            <option value="9">Prata III</option>
+            <option value="10">Prata II</option>
+            <option value="11">Prata I</option>
+            <option value="12">Ouro IV</option>
+            <option value="13">Ouro III</option>
+            <option value="14">Ouro II</option>
+            <option value="15">Ouro I</option>
+            <option value="16">Platina IV</option>
+            <option value="17">Platina III</option>
+            <option value="18">Platina II</option>
+            <option value="19">Platina I</option>
+            <option value="20">Esmeralda IV</option>
+            <option value="21">Esmeralda III</option>
+            <option value="22">Esmeralda II</option>
+            <option value="23">Esmeralda I</option>
+            <option value="24">Diamante IV</option>
+            <option value="25">Diamante III</option>
+            <option value="26">Diamante II</option>
+            <option value="27">Diamante I</option>
+            <option value="28">Mestre</option>
+            <option value="29">Grão Mestre</option>
+            <option value="30">Desafiante</option>
+        </select>
+
+    <!-- Resultado e Pedido -->
+    <div id="result" class="price-display"></div>
+    <div id="order" class="order-display"></div>
+
+        <div class="button-container">
+            <input type="text" id="coupon" placeholder="Cupom de desconto" class="botao-cupom">
+            <button id="couponButton" onclick="toggleCoupon()">Aplicar Cupom</button>
+        </div>
+        <button  id="payButton" onclick="payWithPix()">Pagar</button>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <a href="https://www.twitch.tv/" target="_blank" class="twitch-icon">
+            <i class="fab fa-twitch"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" class="instagram-icon">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <p class="footer-text">
+            Este site é destinado apenas para cálculos estimativos dos valores dos serviços oferecidos.
+        </p>
+        <!-- <div class="jobs-button-container">
+            <a href="https://asteekjobs.rf.gd/relatorio.php" class="jobs-button">
+                <i class="fas fa-tasks"></i> FILA DE JOBS
+            </a>
+        </div> -->
+    </footer>
+</body>
+</html>
