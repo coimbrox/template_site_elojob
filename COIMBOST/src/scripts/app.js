@@ -147,7 +147,32 @@ function setupLoadingIndicators() {
       });
   });
 }
+function applyCoupon() {
+  const couponInput = document.getElementById('coupon');
+  const couponCode = couponInput.value.trim();
+  const resultElement = document.getElementById('result');
 
+  // Lista de cupons válidos e seus descontos (em porcentagem)
+  const coupons = {
+      "COIMBROX10": 10, // 10% de desconto
+  };
+
+  // Verifica se o cupom é válido
+  if (coupons[couponCode]) {
+      const discount = coupons[couponCode];
+      const currentPriceText = resultElement.querySelector('.new-price').innerText.replace('R$', '').trim();
+      const currentPrice = parseFloat(currentPriceText);
+
+      // Calcula o novo preço com desconto
+      const discountedPrice = (currentPrice * (1 - discount / 100)).toFixed(2);
+
+      // Atualiza o preço no HTML
+      resultElement.innerHTML = `<span class="new-price">R$ ${discountedPrice}</span><br>Preço total com ${discount}% de desconto!`;
+  } else {
+      // Exibe mensagem de erro se o cupom for inválido
+      resultElement.innerHTML = `<span class="error">Cupom inválido. Tente novamente.</span>`;
+  }
+}
 function showLoading(button, text) {
   const originalText = button.innerHTML;
   button.setAttribute('data-original-text', originalText);
