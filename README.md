@@ -1,6 +1,6 @@
-# COIMBOST - Elojob
+# COIMBOOST - Elojob
 
-Bem-vindo ao **COIMBOST**, um site para cálculo de preços de serviços de Elojob. Este projeto foi desenvolvido para oferecer uma interface simples e moderna para calcular os valores de boost de liga no jogo.
+Bem-vindo ao **COIMBOOST**, um site para cálculo de preços de serviços de Elojob. Este projeto foi desenvolvido para oferecer uma interface simples e moderna para calcular os valores de boost de liga no jogo.
 
 ## 🚀 Funcionalidades
 
